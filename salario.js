@@ -9,8 +9,9 @@ let texto = require('readline').createInterface({
     output: process.stdout
   });
   texto.question('ingrese la cantidad de naves vendidas este mes: ', naves => {
-    comision_nave= (1500000*naves)
-    total_comision=comision_nave*5/100
-   console.log(total_comision)
-  texto.close();
+    comision_naves_vendias= (1500000*naves)
+    descuento_comision=comision_naves_vendias*0.05
+    total_pago=(comision_naves_vendias-descuento_comision)+3500000
+     console.log(`su pago este mes es de ${total_pago}`)
+ texto.close();
 })
